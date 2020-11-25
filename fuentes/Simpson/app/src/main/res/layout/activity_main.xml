@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/toolbar"></include>
+
+    <TextView
+        android:layout_width="196dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:text="Cantidad de frases"
+        android:textSize="22dp"
+        android:textColor="@color/Black">
+
+    </TextView>
+
+    <Spinner
+        android:id="@+id/consejosSp"
+        android:layout_width="199dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"></Spinner>
+
+    <Button
+        android:id="@+id/solicitarConsejoBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Solicitar Consejo">
+    </Button>
+
+    <ListView
+        android:id="@+id/listaPersonajesLv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+
+</LinearLayout>
