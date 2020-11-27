@@ -4,6 +4,7 @@ public class Personaje {
     private String quote;
     private String character;
     private String image;
+    private String characterDirection;
 
     public String getQuote() {
         return quote;
@@ -27,5 +28,13 @@ public class Personaje {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getCharacterDirection() {
+        return characterDirection;
+    }
+
+    public void setCharacterDirection(String characterDirection) {
+        this.characterDirection = characterDirection;
     }
 }
