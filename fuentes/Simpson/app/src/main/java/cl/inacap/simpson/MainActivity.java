@@ -1,8 +1,5 @@
 package cl.inacap.simpson;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +8,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Spinner;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
      private void consejos ( String opcion ){
         int  cantidades=0;
-        queue= Volley.newRequestQueue( this.getApplicationContext());
+        queue= Volley.newRequestQueue( this);
          JsonObjectRequest jsonReq;
         cantidades=Integer.parseInt(String.valueOf(opcion.charAt(0)));
         switch (cantidades){
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                                 try {
                                     personajes.clear();
                                     Personaje[]arreglo= new Gson().fromJson
-                                            (response.getString(" ")
+                                            (response.getString("response ")
                                                     ,Personaje[].class);
                                     personajes.addAll(Arrays.asList(arreglo));
                                 }catch (Exception ex){
